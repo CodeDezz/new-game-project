@@ -6,19 +6,20 @@
 [node name="Main Level" type="Node2D"]
 
 [node name="Floor" type="Sprite2D" parent="."]
-position = Vector2(90, 105)
-scale = Vector2(1, 0.21093757)
+position = Vector2(147, 101)
+scale = Vector2(1, 0.08984374)
 texture = ExtResource("1_v3uhd")
 
-[node name="Project Label" type="Label" parent="."]
-offset_left = 45.0
-offset_top = -20.0
-offset_right = 85.0
-offset_bottom = 3.0
+[node name="Player" parent="." instance=ExtResource("2_ufxs0")]
+position = Vector2(145, 80)
 
-[node name="Camera2D" type="Camera2D" parent="Project Label"]
-position = Vector2(100, 101)
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(143, 80)
 zoom = Vector2(4, 4)
 
-[node name="Player" parent="." instance=ExtResource("2_ufxs0")]
-position = Vector2(86, 85)
+[node name="Project LAbel" type="Label" parent="."]
+offset_left = 107.0
+offset_top = 38.0
+offset_right = 183.0
+offset_bottom = 61.0
+text = "Win Kyaw"
