@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://7j6fbcgo18bu"]
+
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_v3uhd"]
+[ext_resource type="PackedScene" uid="uid://be8qbmt0fe144" path="res://scenes/player.tscn" id="2_ufxs0"]
+
+[node name="Main Level" type="Node2D"]
+
+[node name="Floor" type="Sprite2D" parent="."]
+position = Vector2(90, 105)
+scale = Vector2(1, 0.21093757)
+texture = ExtResource("1_v3uhd")
+
+[node name="Project Label" type="Label" parent="."]
+offset_left = 45.0
+offset_top = -20.0
+offset_right = 85.0
+offset_bottom = 3.0
+
+[node name="Camera2D" type="Camera2D" parent="Project Label"]
+position = Vector2(100, 101)
+zoom = Vector2(4, 4)
+
+[node name="Player" parent="." instance=ExtResource("2_ufxs0")]
+position = Vector2(86, 85)
