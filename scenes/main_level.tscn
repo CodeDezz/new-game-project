@@ -6,7 +6,7 @@
 [node name="Main Level" type="Node2D"]
 
 [node name="Floor" type="Sprite2D" parent="."]
-position = Vector2(147, 101)
+position = Vector2(145, 100)
 scale = Vector2(1, 0.08984374)
 texture = ExtResource("1_v3uhd")
 
