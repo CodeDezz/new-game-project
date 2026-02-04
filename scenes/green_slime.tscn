@@ -1,8 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://bodi7tr46kd83"]
+[gd_scene load_steps=20 format=3 uid="uid://bodi7tr46kd83"]
 
 [ext_resource type="Script" uid="uid://dckkau24qd4up" path="res://scripts/enemy_simple_move.gd" id="1_0pvn7"]
 [ext_resource type="Texture2D" uid="uid://cklnds033ch3e" path="res://enemies/Green Slime Spritesheet.png" id="1_tuic5"]
 [ext_resource type="PackedScene" uid="uid://dhq0pa6na6p7k" path="res://scenes/killzone.tscn" id="2_0pvn7"]
+[ext_resource type="Script" uid="uid://qrbefqog0ks7" path="res://scripts/head_hit.gd" id="4_4q1e0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4q1e0"]
 atlas = ExtResource("1_tuic5")
@@ -99,6 +100,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mp6ra"]
 size = Vector2(12, 7)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_boo2g"]
+size = Vector2(10, 5)
+
 [node name="GreenSlime" type="Area2D"]
 script = ExtResource("1_0pvn7")
 
@@ -118,3 +122,13 @@ target_position = Vector2(10, 0)
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 target_position = Vector2(-10, 0)
+
+[node name="HeadHit" type="Area2D" parent="."]
+collision_mask = 2
+script = ExtResource("4_4q1e0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HeadHit"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_boo2g")
+
+[connection signal="body_entered" from="HeadHit" to="HeadHit" method="_on_body_entered"]
