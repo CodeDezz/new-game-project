@@ -101,7 +101,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tyl0w"]
-size = Vector2(14, 8)
+size = Vector2(13.283582, 8)
 
 [node name="BigRed_Slime" type="Node2D"]
 
@@ -110,12 +110,12 @@ position = Vector2(25.5, -23.5)
 scale = Vector2(4.1875, 3.9375)
 sprite_frames = SubResource("SpriteFrames_g2qvl")
 animation = &"walk"
-autoplay = "walk"
-frame = 2
-frame_progress = 0.17255056
+autoplay = "Idle"
+frame_progress = 0.49157986
 
 [node name="Killzone" parent="AnimatedSprite2D" instance=ExtResource("2_n6pvg")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Killzone"]
-position = Vector2(-1, 4)
+position = Vector2(-0.64179087, 3.9999995)
+scale = Vector2(1, 0.99999994)
 shape = SubResource("RectangleShape2D_tyl0w")

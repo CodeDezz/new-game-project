@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://2yvq6yiiep7y"]
+
+[ext_resource type="Script" uid="uid://6407es0aaf6p" path="res://scripts/main_menu.gd" id="1_qwnig"]
+[ext_resource type="FontFile" uid="uid://joj26l6wlnab" path="res://fonts/PixelOperator8-Bold.ttf" id="2_5jstl"]
+[ext_resource type="Texture2D" uid="uid://vg35yrr8s102" path="res://Untitled.png" id="2_wu84c"]
+[ext_resource type="FontFile" uid="uid://dmkaq7i4bye25" path="res://fonts/PixelOperator8.ttf" id="3_tfcbk"]
+
+[node name="MainMenu" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qwnig")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+
+[node name="Untitled" type="Sprite2D" parent="PanelContainer"]
+position = Vector2(288.5, 150)
+scale = Vector2(0.99915683, 0.95555556)
+texture = ExtResource("2_wu84c")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Title Label" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5jstl")
+theme_override_font_sizes/font_size = 64
+text = "Main Menu"
+
+[node name="Play Button" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_tfcbk")
+theme_override_font_sizes/font_size = 48
+text = "Play"
+
+[node name="Options Button" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_tfcbk")
+theme_override_font_sizes/font_size = 48
+text = "Options"
+
+[node name="Quit Button" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_tfcbk")
+theme_override_font_sizes/font_size = 48
+text = "Quit"
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Play Button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Options Button" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Quit Button" to="." method="_on_quit_button_pressed"]
