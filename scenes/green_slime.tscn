@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bodi7tr46kd83"]
+[gd_scene format=3 uid="uid://bodi7tr46kd83"]
 
 [ext_resource type="Script" uid="uid://dckkau24qd4up" path="res://scripts/enemy_simple_move.gd" id="1_0pvn7"]
 [ext_resource type="Texture2D" uid="uid://cklnds033ch3e" path="res://enemies/Green Slime Spritesheet.png" id="1_tuic5"]
@@ -101,34 +101,34 @@ animations = [{
 size = Vector2(14, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_boo2g"]
-size = Vector2(8, 5)
+size = Vector2(8, 5.5)
 
-[node name="GreenSlime" type="Area2D"]
+[node name="GreenSlime" type="Area2D" unique_id=2007977985]
 script = ExtResource("1_0pvn7")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=706451658]
 sprite_frames = SubResource("SpriteFrames_e30mu")
 autoplay = "default"
 frame_progress = 0.53234094
 
-[node name="Killzone" parent="." instance=ExtResource("2_0pvn7")]
+[node name="Killzone" parent="." unique_id=318799421 instance=ExtResource("2_0pvn7")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1477184076]
 position = Vector2(-1, 4)
 shape = SubResource("RectangleShape2D_4q1e0")
 
-[node name="RayCastRight" type="RayCast2D" parent="."]
+[node name="RayCastRight" type="RayCast2D" parent="." unique_id=776638121]
 target_position = Vector2(10, 0)
 
-[node name="RayCastLeft" type="RayCast2D" parent="."]
+[node name="RayCastLeft" type="RayCast2D" parent="." unique_id=1713206909]
 target_position = Vector2(-10, 0)
 
-[node name="HeadHit" type="Area2D" parent="."]
+[node name="HeadHit" type="Area2D" parent="." unique_id=2082282728]
 collision_mask = 2
 script = ExtResource("4_4q1e0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HeadHit"]
-position = Vector2(0, -1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HeadHit" unique_id=451817490]
+position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_boo2g")
 
 [connection signal="body_entered" from="HeadHit" to="HeadHit" method="_on_body_entered"]

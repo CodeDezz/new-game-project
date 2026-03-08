@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://be8qbmt0fe144"]
+[gd_scene format=3 uid="uid://be8qbmt0fe144"]
 
 [ext_resource type="Texture2D" uid="uid://ddbe8lpemwmax" path="res://characters/DinoSprites - doux.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://wddgu6jaiy0m" path="res://scripts/player.gd" id="1_g2els"]
@@ -102,15 +102,15 @@ animations = [{
 radius = 6.0
 height = 18.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" unique_id=1971750673]
 collision_layer = 2
 script = ExtResource("1_g2els")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=820125873]
+position = Vector2(2, 0)
 sprite_frames = SubResource("SpriteFrames_tuyoq")
-animation = &"run"
+animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.20451991
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=415766860]
 shape = SubResource("CapsuleShape2D_fjrip")
