@@ -15,12 +15,10 @@ layout_mode = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_pl4dn")
 theme_override_font_sizes/font_size = 8
-text = "Coin:
-Apple:"
+text = "Coin:"
 
 [node name="Coin Count" type="Label" parent="HBoxContainer" unique_id=1322368681]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_pl4dn")
 theme_override_font_sizes/font_size = 8
-text = "#
-#"
+text = "#"

@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://dmpkpog2pyxfw"]
+
+[ext_resource type="Texture2D" uid="uid://btggm4x46u8e5" path="res://characters/DinoSprites - tard.png" id="1_1qclf"]
+[ext_resource type="Script" uid="uid://cdxwuttqhlg37" path="res://scenes/npc_2.gd" id="1_23bb0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_23bb0"]
+atlas = ExtResource("1_1qclf")
+region = Rect2(408, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8v6sq"]
+atlas = ExtResource("1_1qclf")
+region = Rect2(432, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qchs1"]
+atlas = ExtResource("1_1qclf")
+region = Rect2(456, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_362ta"]
+atlas = ExtResource("1_1qclf")
+region = Rect2(480, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dwi7"]
+atlas = ExtResource("1_1qclf")
+region = Rect2(504, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_288er"]
+atlas = ExtResource("1_1qclf")
+region = Rect2(528, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekfb8"]
+atlas = ExtResource("1_1qclf")
+region = Rect2(552, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ltk5q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_23bb0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8v6sq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qchs1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_362ta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2dwi7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_288er")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekfb8")
+}],
+"loop": true,
+"name": &"running",
+"speed": 10.0
+}]
+
+[node name="npc2" type="Node2D" unique_id=534427939]
+script = ExtResource("1_23bb0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=660073426]
+sprite_frames = SubResource("SpriteFrames_ltk5q")
+animation = &"running"
+autoplay = "running"
+frame_progress = 0.28660733
+
+[node name="RayCastRight" type="RayCast2D" parent="AnimatedSprite2D" unique_id=2052025005]
+position = Vector2(-1, 2)
+scale = Vector2(1.083234, 1.1418223)
+target_position = Vector2(10, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="AnimatedSprite2D" unique_id=695570210]
+position = Vector2(4, 2)
+scale = Vector2(1.083234, 1.1418223)
+target_position = Vector2(-14.770585, 0)

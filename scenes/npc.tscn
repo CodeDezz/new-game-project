@@ -44,4 +44,3 @@ animations = [{
 sprite_frames = SubResource("SpriteFrames_tl2vt")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.57175004
